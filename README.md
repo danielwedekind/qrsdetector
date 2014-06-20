@@ -6,8 +6,9 @@ MATLAB Skript of the Pan-Tompkins QRS Detector
 
 This is an offline implementation of the QRS-detection, which nevertheless is realizing a adaptive detection (from beat to beat) like the proposed online implementation. Compared to the original proposed filtering, all filtering is replaced by phase zero filtering. The most important intermediate data (different feature signals) is available as an optional output.
 
-Copyright (C) 2014  Daniel Wedekind
-TU Dresden, Institute for Biomedical Engineering, Biosignal Processing Group - Dresden 2014
+Copyright (C) 2014  Daniel Wedekind: 
+TU Dresden, Institute for Biomedical Engineering, Biosignal Processing Group - Dresden 2014.
+
 daniel.wedekind@mailbox.tu-dresden.de
 
 This program is free software: you can redistribute it and/or modify
