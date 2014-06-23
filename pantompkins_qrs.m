@@ -1,5 +1,5 @@
 %function [qrs_pos] = pantompkins_qrs(data,fs,varargin)
-function[qrs_pos,varargout] = pantompkins_qrs2(data,fs,varargin)
+function[qrs_pos,varargout] = pantompkins_qrs(data,fs,varargin)
 % QRS Detection with Pan-Tompkins algorithm. 
 % Pan et al. 1985: A Real-Time QRS Detection Algorithm.
 % IEEE Trans Bio Eng. Vol. 32, No. 3, S.230-236
