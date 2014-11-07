@@ -27,13 +27,13 @@ function[qrs_pos,varargout] = pantompkins_qrs(data,fs,varargin)
 % input: - data: input-data (single channel vector)
 %        - fs: data sampling-frequency
 % (optional input):
-%        - verbose:     enable/disables function verbose [bool] (default true)
+%        - verbose:   enable/disables function verbose [bool] (default true)
 %        - str_ident:   dataset-identification-string used for error-messages
 %        - refrac:      refractory time [ms] (default 200ms)
 %        - refracT:     refractory time for T-wave [ms] (default 360ms).
 %                       Part of the heuristics behind the algorithm.
 %        _ QRSmaxwidth: expected maximal length of QRS complexes [ms].
-%                       Default 150ms.
+%                       Default 
 % output:
 %        - qrs_pos: indexes of detected peaks (in samples)
 %        - varargout:
