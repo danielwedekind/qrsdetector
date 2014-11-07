@@ -26,9 +26,14 @@ function[qrs_pos,varargout] = pantompkins_qrs(data,fs,varargin)
 %
 % input: - data: input-data (single channel vector)
 %        - fs: data sampling-frequency
-%        - varargin
-%        - verbose:   enable/disables function verbose [bool]
-%        - str_ident: dataset-identification-string used for error-messages
+% (optional input):
+%        - verbose:     enable/disables function verbose [bool] (default true)
+%        - str_ident:   dataset-identification-string used for error-messages
+%        - refrac:      refractory time [ms] (default 200ms)
+%        - refracT:     refractory time for T-wave [ms] (default 360ms).
+%                       Part of the heuristics behind the algorithm.
+%        _ QRSmaxwidth: expected maximal length of QRS complexes [ms].
+%                       Default 150ms.
 % output:
 %        - qrs_pos: indexes of detected peaks (in samples)
 %        - varargout:
@@ -52,8 +57,9 @@ function[qrs_pos,varargout] = pantompkins_qrs(data,fs,varargin)
 % Last updated : 29-05-2014
 % 
 % Change log:
-%  29-05-2014: Andreotti   added refractory times and qrs width as input
+%  29.05.2014: Andreotti   added refractory times and qrs width as input
 %                          parameter
+%  07.11.2014: Andreotti   added commentaries about inputs
 %
 % To be included in future (possible improvements):
 % - QRS-replacement after RR-analysis (replacement functionality is already
@@ -689,7 +695,7 @@ function [filt_dat,diff_dat,mov_dat] = pantompkinsFilter(data, fs,QRSmaxwidth)
 %                M: amout of single input channels
 %                N: single data channel length
 %        - fs: data sampling-frequency
-%        - varargin
+%        - QRSmaxwidth: expected maximal width for QRS complexes [ms]
 %        NONE
 % output:
 %        - filt_dat: data after initial powerline and bandpass filtering
